@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box; 
+    /* outline: 1px solid red; */
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    display: flex; 
+    flex-wrap: wrap;
+    background-color: #4700D8;
+    margin: 0;
+    padding: 1rem;
+    padding-top: 3rem;
+}
+
+.add {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: #F900BF;
+    color: #fff;
+    font-family: inherit;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.note {
+    margin: 30px 20px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    background-color: #FF85B3;
+    height: 400px;
+    width: 400px;
+    overflow: auto;
+}
+
+.note .tools {
+    width: 100%;
+    background-color: #F900BF;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    padding: .5rem;
+}
+
+.note .tools button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.note .main {
+    padding: 1rem;
+}
+
+.note textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border: none;
+    height: 90%;
+    resize: none;
+    background-color: transparent;
+    color: #000;
+    outline: none;
+}
