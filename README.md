@@ -1,6 +1,6 @@
 # Notes App
 
-## Technologies Used: 
+## Technologies Used
 - Markdown -v4
 - In built Local Storage
 
