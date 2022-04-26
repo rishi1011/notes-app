@@ -38,7 +38,7 @@ function addNewNote(text = '') {
     textarea.value = text;
 
     editBtn.addEventListener('click', () => {
-        toggleTextDisplay(textarea, main);
+        toggleTextDisplayToTextarea(textarea, main);
         textarea.focus();
         checkBtn.classList.remove('hidden');
     });
@@ -46,7 +46,7 @@ function addNewNote(text = '') {
     textarea.addEventListener('click', () => checkBtn.classList.remove('hidden'));
 
     checkBtn.addEventListener('click', () => {
-        toggleTextDisplay(textarea, main);
+        toggleTextDisplayToMain(textarea, main);
         const value = textarea.value;
         main.innerHTML = marked.parse(value);
         checkBtn.classList.add('hidden');
@@ -59,9 +59,14 @@ function addNewNote(text = '') {
     });
 }
 
-function toggleTextDisplay(textarea, main) {
-    textarea.classList.toggle('hidden');
-    main.classList.toggle('hidden');
+function toggleTextDisplayToMain(textarea, main) {
+    textarea.classList.add('hidden');
+    main.classList.remove('hidden');
+}
+
+function toggleTextDisplayToTextarea(textarea, main) {
+    textarea.classList.remove('hidden');
+    main.classList.add('hidden');
 }
 
 function updateLS() {
